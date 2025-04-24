@@ -16,7 +16,7 @@ class SecondHand extends ClockHand {
     @Override
     public String toSvg() {
         return String.format(
-                "<!-- Wskazówka sekundowa -->\n" +
+                "<!-- Sekundy -->\n" +
                         "<line x1='0' y1='0' x2='0' y2='-%d' " +
                         "stroke='%s' stroke-width='%d' " +
                         "transform='rotate(%s)'/>",
