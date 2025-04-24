@@ -33,7 +33,7 @@ public class Main {
             City.generateAnalogClocksSvg(cityList, analogClock);
 
         } catch (IOException e) {
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 }
