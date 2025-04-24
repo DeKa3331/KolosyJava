@@ -2,7 +2,7 @@ import java.time.LocalTime;
 
 class MinuteHand extends ClockHand {
     public MinuteHand() {
-        this.color = "blue";
+        this.color = "red";
         this.length = 70;
         this.thickness = 2;
     }
@@ -18,11 +18,10 @@ class MinuteHand extends ClockHand {
     public String toSvg() {
         return String.format(
                 "<!-- Wskazówka minutowa -->\n" +
-                        "<line x1='0' y1='0' x2='%d' y2='%d' " +
+                        "<line x1='0' y1='0' x2='0' y2='-%d' " +
                         "stroke='%s' stroke-width='%d' " +
-                        "transform='rotate(%.1f,150,150)'/>",
-                150 + (int)(length * Math.sin(Math.toRadians(angle))),
-                150 - (int)(length * Math.cos(Math.toRadians(angle))),
-                color, thickness, angle);
+                        "transform='rotate(%s)'/>",
+                length, color, thickness,
+                String.format("%.1f", angle).replace(',', '.'));
     }
 }
