@@ -36,17 +36,15 @@ class AnalogClock extends Clock {
 
     public String toSvg(String path) {
         StringBuilder svg = new StringBuilder()
-                .append("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n")
-                .append("<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n")
-                .append("<svg width=\"300\" height=\"300\" viewBox=\"0 0 300 300\" xmlns=\"http://www.w3.org/2000/svg\">\n")
+                .append("<svg width=\"200\" height=\"200\" viewBox=\"-100 -100 200 200\" xmlns=\"http://www.w3.org/2000/svg\">\n")
                 .append("  <!-- Tarcza zegara -->\n")
-                .append("  <circle cx=\"150\" cy=\"150\" r=\"140\" fill=\"white\" stroke=\"black\" stroke-width=\"2\"/>\n")
+                .append("  <circle cx=\"0\" cy=\"0\" r=\"90\" fill=\"white\" stroke=\"black\" stroke-width=\"2\"/>\n")
                 .append("  <!-- Znaczniki godzin -->\n")
-                .append("  <g text-anchor=\"middle\" font-size=\"14\" fill=\"black\">\n")
-                .append("    <text x=\"150\" y=\"30\">12</text>\n")
-                .append("    <text x=\"270\" y=\"160\">3</text>\n")
-                .append("    <text x=\"150\" y=\"290\">6</text>\n")
-                .append("    <text x=\"30\" y=\"160\">9</text>\n")
+                .append("  <g text-anchor=\"middle\">\n")
+                .append("    <text x=\"0\" y=\"-80\" dy=\"6\">12</text>\n")
+                .append("    <text x=\"80\" y=\"0\" dy=\"4\">3</text>\n")
+                .append("    <text x=\"0\" y=\"80\" dy=\"6\">6</text>\n")
+                .append("    <text x=\"-80\" y=\"0\" dy=\"4\">9</text>\n")
                 .append("  </g>\n");
 
         for (ClockHand hand : hands) {

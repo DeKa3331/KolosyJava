@@ -15,14 +15,13 @@ class SecondHand extends ClockHand {
 
     @Override
     public String toSvg() {
-        int x2 = 150 + (int) (length * Math.sin(Math.toRadians(angle)));
-        int y2 = 150 - (int) (length * Math.cos(Math.toRadians(angle)));
 
         return String.format(
-                "<line x1='150' y1='150' x2='%d' y2='%d' " +
+                "<line x1='0' y1='0' x2='%d' y2='%d' " +
                         "stroke='%s' stroke-width='%d' " +
                         "transform='rotate(%.1f,150,150)'/>",
-                x2, y2, color, thickness, angle
-        );
+                150 + (int)(length * Math.sin(Math.toRadians(angle))),
+                150 - (int)(length * Math.cos(Math.toRadians(angle))),
+                color, thickness, angle);
     }
 }
