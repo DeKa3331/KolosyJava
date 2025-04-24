@@ -13,7 +13,6 @@ public class Main {
             digitalClock.setTime(23, 59, 59);
             System.out.println("Set time: " + digitalClock);
 
-            // Step 4: Test city change
             digitalClock.setCity(cities.get("Kijów"));
             System.out.println("After city change: " + digitalClock);*/
 

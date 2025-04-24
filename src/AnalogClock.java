@@ -34,7 +34,7 @@ class AnalogClock extends Clock {
         updateHands();
     }
 
-    public String toSvg(String path) {
+    public String toSvg() {
         StringBuilder svg = new StringBuilder()
                 .append("<svg width=\"200\" height=\"200\" viewBox=\"-100 -100 200 200\" xmlns=\"http://www.w3.org/2000/svg\">\n")
                 .append("  <!-- Tarcza zegara -->\n")

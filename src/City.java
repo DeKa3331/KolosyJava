@@ -104,7 +104,7 @@ class City {
 
         for (City city : cities) {
             clock.setCity(city);
-            String svgContent = clock.toSvg(null);
+            String svgContent = clock.toSvg();
             Path filePath = dirPath.resolve(city.getName() + ".svg");
             Files.writeString(filePath, svgContent);
         }
