@@ -2,7 +2,7 @@ import java.time.LocalTime;
 
 class MinuteHand extends ClockHand {
     public MinuteHand() {
-        this.color = "red";
+        this.color = "black";
         this.length = 70;
         this.thickness = 2;
     }
